@@ -5,7 +5,3 @@ metadata:
 data:
   database: mongodb
   database_uri: mongodb://localhost:27017
-  
-  keys: | 
-    image.public.key=771 
-    rsa.public.key=42
