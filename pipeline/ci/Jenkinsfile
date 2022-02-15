@@ -22,7 +22,7 @@ pipeline {
         stage('uploading') {
             steps {
                 sh '''
-                aws s3 cp Krishna/basic_code/webapp/target/webapp.war s3://newdevopsbucket/
+                aws s3 cp Krishna/basic_code/webapp/target/webapp.war s3://newbuckforweb/
                 '''
             }
         }
