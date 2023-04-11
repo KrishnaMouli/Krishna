@@ -19,3 +19,23 @@ resource "aws_iam_policy" "policy3" {
 }
 EOF
 }
+
+#######################################################
+
+variable "instance_type" {
+  type = map
+  default = {
+    "master"  = "t2.medium"
+    "slave" = "t2.micro"
+  }
+}
+
+variable "type" {
+  description = "The type of instance to start"
+  type        = string
+  default     = "master"
+}
+
+instance_type          = var.instance_type["${var.type}"]
+
+###########################################################
